@@ -8,8 +8,10 @@
 ![IAMroleCD](https://github.com/ericincloud/AWS-CodePipeline-and-CodeDeploy/assets/144301872/0545c0dc-a8d3-48cf-be96-af143eb6f705)
 ![IAMroleCD2](https://github.com/ericincloud/AWS-CodePipeline-and-CodeDeploy/assets/144301872/7c70a633-dc6f-43b2-90ad-9fa405143ab6)
 
+## Step 2: Creating the Development Pipeline - Create Development branch
+#### Create a Development or `Dev` branch with GitHub respository. 
 
-## Step 2: Creating the Development Pipeline - Setup EC2 instance
+## Step 2: Setup EC2 instance
 #### Create an EC2 instance in a public subnet. Configure the instance with the EC2 CodeDeploy Role instance profile and edit the EC2's security group to allow Port 80 from anywhere. 
 
 ![CDinstance](https://github.com/ericincloud/AWS-CodePipeline-and-CodeDeploy/assets/144301872/881d5f16-2d0e-4c5d-8e57-bf9dc1e3eba0)
