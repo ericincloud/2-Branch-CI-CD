@@ -1,1 +1,1 @@
-# 2-Branch-CodeDeploy-and-CodePipeline-CI-CD
+# 2-Branch-CI-CD
