@@ -3,7 +3,7 @@
 
 ## Architectural Diagram
 
-## Step 1: Create 2 IAM roles: CodeDeploy EC2 Role AND CodeDeploy Role
+## Step 1: Create 2 IAM roles - CodeDeploy EC2 Role AND CodeDeploy Role
 
 ![IAMroleCD](https://github.com/ericincloud/AWS-CodePipeline-and-CodeDeploy/assets/144301872/0545c0dc-a8d3-48cf-be96-af143eb6f705)
 ![IAMroleCD2](https://github.com/ericincloud/AWS-CodePipeline-and-CodeDeploy/assets/144301872/7c70a633-dc6f-43b2-90ad-9fa405143ab6)
