@@ -33,15 +33,15 @@ sudo systemctl status nginx
 ```
 
 #### Install the CodeDeploy Agent using commands: 
+
 ```
-wget https://aws-codedeploy-us-east-1.s3.us-east-1.amazonaws.com/latest/install
-chmod +x install
+sudo yum install -y ruby wget
+wget https://aws-codedeploy-us-east-1.s3.amazonaws.com/latest/install
+chmod +x ./install
 sudo ./install auto
-sudo systemctl start codedeploy-agent
-sudo systemctl enable codedeploy-agent
 
 # Check status:
-sudo systemctl status codedeploy-agent
+sudo service codedeploy-agent status
 
 ```
 
@@ -50,7 +50,7 @@ sudo systemctl status codedeploy-agent
 
 
 ## Step 4: Create CodeDeploy Application
-#### Head to CodeDeploy > Applications > Create Application
+#### Head to CodeDeploy > Applications > Create Application > Create Deployment Group
 
 ![CreateCDApp](https://github.com/ericincloud/AWS-CodePipeline-and-CodeDeploy/assets/144301872/c6a1d380-fdca-4dc1-88bc-00ea566cb355)
 ![DepGroup](https://github.com/ericincloud/AWS-CodePipeline-and-CodeDeploy/assets/144301872/baff1372-cf29-4314-a78d-9f0b8ba2ec8e)
