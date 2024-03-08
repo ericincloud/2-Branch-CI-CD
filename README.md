@@ -42,7 +42,6 @@ sudo ./install auto
 
 # Check status:
 sudo service codedeploy-agent status
-
 ```
 
 #### Verify functionality by accessing the instance IP. You should see a default NGINX webpage.
