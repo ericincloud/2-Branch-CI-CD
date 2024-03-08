@@ -11,7 +11,7 @@
 ## Step 2: Creating the Development Pipeline - Create Development branch
 #### Create a Development or `Dev` branch with GitHub respository. 
 
-## Step 2: Setup EC2 instance
+## Step 3: Setup EC2 instance
 #### Create an EC2 instance in a public subnet. Configure the instance with the EC2 CodeDeploy Role instance profile and edit the EC2's security group to allow Port 80 from anywhere. 
 
 ![CDinstance](https://github.com/ericincloud/AWS-CodePipeline-and-CodeDeploy/assets/144301872/881d5f16-2d0e-4c5d-8e57-bf9dc1e3eba0)
@@ -49,7 +49,7 @@ sudo systemctl status codedeploy-agent
 ![NginxDefWeb](https://github.com/ericincloud/AWS-CodePipeline-and-CodeDeploy/assets/144301872/783fd999-85c2-47e7-9184-06be44924848)
 
 
-## Step 3: Create CodeDeploy Application
+## Step 4: Create CodeDeploy Application
 #### Head to CodeDeploy > Applications > Create Application
 
 ![CreateCDApp](https://github.com/ericincloud/AWS-CodePipeline-and-CodeDeploy/assets/144301872/c6a1d380-fdca-4dc1-88bc-00ea566cb355)
@@ -58,7 +58,7 @@ sudo systemctl status codedeploy-agent
 ![DepGroup4](https://github.com/ericincloud/AWS-CodePipeline-and-CodeDeploy/assets/144301872/8b97636c-a026-44df-a9a9-868ef438e075)
 ![DepGroup5](https://github.com/ericincloud/AWS-CodePipeline-and-CodeDeploy/assets/144301872/3b1d1f31-29fd-4d9c-8509-fce1f126b7c6)
 
-## Step 4: Create Pipeline
+## Step 5: Create Pipeline
 #### Connect to Github repository. Paste in your repo name if it does not pop up on the selection menu. > No filter> > Skip build stage > Select CodeDeploy for as the deploy provider and select the CodeDeploy Application created from Step 3. > Create pipeline. 
 
 ![pipeline1](https://github.com/ericincloud/AWS-CodePipeline-and-CodeDeploy/assets/144301872/292393b2-901d-484e-a636-1d96b7825ad9)
@@ -67,7 +67,7 @@ sudo systemctl status codedeploy-agent
 ![pipeline4](https://github.com/ericincloud/AWS-CodePipeline-and-CodeDeploy/assets/144301872/6d3a8e9d-9792-4dd4-b754-6d97e633e380)
 
 
-## Step 5: Create appspec.yml file and upload files
+## Step 6: Create appspec.yml file and upload files
 
 #### Upload files. This example repository will contain `index.html`, `style.css`, and `avatarmaker.png`. 
 ![CodeDepFiles](https://github.com/ericincloud/AWS-CodePipeline-and-CodeDeploy/assets/144301872/a08ec26f-ff41-43ea-b190-bc08d8070292)
@@ -124,12 +124,18 @@ service nginx start
 
 ![CodeDepScripts](https://github.com/ericincloud/AWS-CodePipeline-and-CodeDeploy/assets/144301872/2d16997d-31bf-4f6b-8ceb-49b2180bcc81)
 
-## Step 6: Verify Functionality
+## Step 7: Verify Functionality
 #### Refresh the webpage. If everything is properly configured, you will be able to see the new webpage you've added! Any changes made to the GitHub repository will be updated automatically to the instance as well.
 
 ![CDWebpage](https://github.com/ericincloud/AWS-CodePipeline-and-CodeDeploy/assets/144301872/f092eb00-c2cc-471b-ac93-9061bbe40e64)
 
-## Step 7: Create the Production Pipeline and Branch
+## Step 8: Create the Production Pipeline and Branch
+#### Create a Production or `Prod` branch in GitHub repository.
+
+#### Repeat Steps 3 to 5 to create Production pipeline.
+
+## Step 9: 
+####
 
 ### Finish! Congratulations you've setup and configured a 2-Branch pipeline using AWS CodeDeploy and CodePipeline!
 
