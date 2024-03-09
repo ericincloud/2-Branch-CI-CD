@@ -1,0 +1,18 @@
+version: 0.0
+os: linux
+files:
+ - source: /index.html
+   destination: /usr/share/nginx/html
+ - source: /style.css
+   destination: /usr/share/nginx/html
+ - source: /avatarmaker.png
+   destination: /usr/share/nginx/html
+hooks:
+ BeforeInstall:
+   - location: scripts/before_install.sh
+     timeout: 300
+     runas: root
+ AfterInstall:
+   - location: scripts/after_install.sh
+     timeout: 300 
+     runas: root
