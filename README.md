@@ -133,8 +133,8 @@ service nginx start
 
 #### Repeat Steps 3 to 5 to create Production pipeline.
 
-## Step 9: 
-####
+## Step 9: Merge Dev and Prod
+#### When satisfied with the resources in the `Dev` branch, merge with the `Prod` branch in the GitHub repository. This will send contents from the Dev branch to the Prod branch - triggering the production pipeline. The resources will mirror the contents within the Dev branch. 
 
 ### Finish! Congratulations you've setup and configured a 2-Branch pipeline using AWS CodeDeploy and CodePipeline!
 
