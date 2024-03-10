@@ -1,5 +1,5 @@
-# 2-Branch-CI-CD
-#### 2 Branch CI/CD utilizes AWS CodeDeploy, CodePipeline, a GitHub Production branch, and a Development branch allowing developers to Continuously Integrate and Continuously Deliver (CI/CD). Chnages from the Development branch are first reflected on the development pipeline. Once satisfied, developers can merge to production by sending changes to the production pipeline. This project builds off the the "AWS-CodePipeline-and-CodeDeploy" project/repository
+# 2-Branch-CI-CD 
+#### 2 Branch CI/CD allows developers to efficiently refine and test applications before deployment to live servers. By leveraging AWS CodeDeploy, CodePipeline, and GitHub repositories - developers can seamlessly integrate and deliver their code through Continuous Integration and Continuous Delivery (CI/CD) pipelines. Developers iteratively build and test applications in the Development branch. When satisified, updates from the development branch are merged to the production branch thus, automatically triggering the production pipeline and deploying the finished application for real-world usage. This streamlined process ensures robust testing and validation before an application reaches production, increasing reliability and stability.
 
 ## Architectural Diagram
 
@@ -136,7 +136,11 @@ service nginx start
 ## Step 9: Merge Dev and Prod
 #### When satisfied with the resources in the `Dev` branch, merge with the `Prod` branch in the GitHub repository. This will send contents from the Dev branch to the Prod branch - triggering the production pipeline. The resources will mirror the contents within the Dev branch. 
 
-### Finish! Congratulations you've setup and configured a 2-Branch pipeline using AWS CodeDeploy and CodePipeline!
+![merge](https://github.com/ericincloud/2-Branch-CI-CD/assets/144301872/e933ccac-2d67-49c0-9ace-d2a22e84d1ed)
+![merge2](https://github.com/ericincloud/2-Branch-CI-CD/assets/144301872/7d152467-f54f-4a17-9110-ec2407dbb1a4)
+![merged](https://github.com/ericincloud/2-Branch-CI-CD/assets/144301872/19aa7569-79a2-4ecf-9572-b4571c9bf91b)
+
+### Finish! Congratulations you've setup and configured 2-Branch CI/CD using AWS CodeDeploy and CodePipeline!
 
 ## Notes
 * Make sure to install the CodeDeploy agent on EC2 instance.
