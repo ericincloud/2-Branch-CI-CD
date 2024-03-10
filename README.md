@@ -1,5 +1,9 @@
 # 2-Branch-CI-CD 
-#### 2 Branch CI/CD allows developers to efficiently refine and test applications before deployment to live servers. By leveraging AWS CodeDeploy, CodePipeline, and GitHub repositories - developers can seamlessly integrate and deliver their code through Continuous Integration and Continuous Delivery (CI/CD) pipelines. Developers iteratively build and test applications in the Development branch. When satisified, updates from the development branch are merged to the production branch thus, automatically triggering the production pipeline and deploying the finished application for real-world usage. This streamlined process ensures robust testing and validation before an application reaches production, increasing reliability and stability.
+#### 2 Branch CI/CD allows developers to efficiently refine and test applications before deployment to live servers. 
+
+#### By leveraging AWS CodeDeploy, CodePipeline, and GitHub repositories - developers can seamlessly integrate and deliver their code through Continuous Integration and Continuous Delivery (CI/CD) pipelines. Developers iteratively build and test applications in the Development branch. 
+
+#### When satisified, updates from the development branch are merged to the production branch thus, automatically triggering the production pipeline and deploying the finished application for real-world usage. This streamlined process ensures robust testing and validation before an application reaches production, increasing reliability and stability.
 
 ## Architectural Diagram
 
