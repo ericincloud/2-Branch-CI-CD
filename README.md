@@ -1,4 +1,4 @@
-# 2-Branch-CI-CD 
+# Multi-Branch-CI-CD 
 #### 2 Branch CI/CD allows developers to efficiently refine and test applications before deployment to live servers. 
 
 #### By leveraging AWS CodeDeploy, CodePipeline, and GitHub repositories - developers can seamlessly integrate and deliver their code through Continuous Integration and Continuous Delivery (CI/CD) pipelines. Developers iteratively build and test applications in the Development branch. 
@@ -6,6 +6,8 @@
 #### When satisified, updates from the development branch are merged to the production branch thus, automatically triggering the production pipeline and deploying the finished application for real-world usage. This streamlined process ensures robust testing and validation before an application reaches production, increasing reliability and stability.
 
 ## Architectural Diagram
+
+![2BranchArch](https://github.com/ericincloud/2-Branch-CI-CD/assets/144301872/ba6d9c98-c32b-4a7e-9bc0-850ceaef20cb)
 
 ## Step 1: Create 2 IAM roles - CodeDeploy EC2 Role AND CodeDeploy Role
 
