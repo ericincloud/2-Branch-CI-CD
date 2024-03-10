@@ -1,5 +1,5 @@
 # Multi-Branch-CI-CD 
-#### Multi-Branch CI/CD allows developers to efficiently refine and test applications before deployment to live servers. 
+#### Multi-Branch CI/CD (2 Branches, 2 Pipelines) allow developers to efficiently refine and test applications before deployment to live servers. 
 
 #### By leveraging AWS CodeDeploy, CodePipeline, and GitHub repositories - developers can seamlessly integrate and deliver their code through Continuous Integration and Continuous Delivery (CI/CD) pipelines. Developers iteratively build and test applications in the Development branch. 
 
