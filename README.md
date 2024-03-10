@@ -143,7 +143,20 @@ service nginx start
 * Change `destination` parameter in the `appspec.yml` file based on the OS/distributon + scripts.
 * Delete and recreate scripts files in proper order (before 1st, after 2nd) if script error occurs.
 * Connect/Install a new app when using a new repository.
-* Make sure EC2 instance and CodeDeploy Application has proper IAM permissions.  
+* Make sure EC2 instance and CodeDeploy Application has proper IAM permissions.
+* Use "Release Change" to manually trigger pipeline in CodePipeline
+
+## Reference
+* Stop CodeDeploy Agent <br>
+  `sudo service codedeploy-agent stop`
+
+* Start CodeDeploy Agent <br>
+  `sudo service codedeploy-agent start`
+
+* Check CodeDeploy Agent Status <br>
+  `sudo service codedeploy-agent status`
+
+  
 
 
 
