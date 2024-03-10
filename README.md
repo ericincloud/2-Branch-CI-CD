@@ -1,5 +1,5 @@
 # Multi-Branch-CI-CD 
-#### 2 Branch CI/CD allows developers to efficiently refine and test applications before deployment to live servers. 
+#### Multi-Branch CI/CD allows developers to efficiently refine and test applications before deployment to live servers. 
 
 #### By leveraging AWS CodeDeploy, CodePipeline, and GitHub repositories - developers can seamlessly integrate and deliver their code through Continuous Integration and Continuous Delivery (CI/CD) pipelines. Developers iteratively build and test applications in the Development branch. 
 
@@ -146,7 +146,7 @@ service nginx start
 ![merge2](https://github.com/ericincloud/2-Branch-CI-CD/assets/144301872/7d152467-f54f-4a17-9110-ec2407dbb1a4)
 ![merged](https://github.com/ericincloud/2-Branch-CI-CD/assets/144301872/19aa7569-79a2-4ecf-9572-b4571c9bf91b)
 
-### Finish! Congratulations you've setup and configured 2-Branch CI/CD using AWS CodeDeploy and CodePipeline!
+### Finish! Congratulations you've setup and configured Multi-Branch CI/CD using AWS CodeDeploy and CodePipeline!
 
 ## Notes
 * Make sure to install the CodeDeploy agent on EC2 instance.
