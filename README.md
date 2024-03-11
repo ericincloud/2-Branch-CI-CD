@@ -1,7 +1,13 @@
-# 2-Branch-CI-CD
-#### 2 Branch CI/CD utilizes AWS CodeDeploy, CodePipeline, a GitHub Production branch, and a Development branch allowing developers to Continuously Integrate and Continuously Deliver (CI/CD). Chnages from the Development branch are first reflected on the development pipeline. Once satisfied, developers can merge to production by sending changes to the production pipeline. This project builds off the the "AWS-CodePipeline-and-CodeDeploy" project/repository
+# Multi-Branch-CI-CD 
+#### Multi-Branch CI/CD (2 Branches, 2 Pipelines) allow developers to efficiently refine and test applications before deployment to live servers. 
+
+#### By leveraging AWS CodeDeploy, CodePipeline, and GitHub repositories - developers can seamlessly integrate and deliver their code through Continuous Integration and Continuous Delivery (CI/CD) pipelines. Developers iteratively build and test applications in the Development branch. 
+
+#### When satisified, updates from the development branch are merged to the production branch - automatically triggering the production pipeline and deploying the finished application for real-world usage. This streamlined process ensures robust testing and validation before an application reaches production, increasing reliability and stability.
 
 ## Architectural Diagram
+
+![2BranchArch](https://github.com/ericincloud/2-Branch-CI-CD/assets/144301872/ba6d9c98-c32b-4a7e-9bc0-850ceaef20cb)
 
 ## Step 1: Create 2 IAM roles - CodeDeploy EC2 Role AND CodeDeploy Role
 
@@ -58,7 +64,7 @@ sudo service codedeploy-agent status
 ![DepGroup5](https://github.com/ericincloud/AWS-CodePipeline-and-CodeDeploy/assets/144301872/3b1d1f31-29fd-4d9c-8509-fce1f126b7c6)
 
 ## Step 5: Create Pipeline
-#### Connect to Github repository. Paste in your repo name if it does not pop up on the selection menu. > No filter> > Skip build stage > Select CodeDeploy for as the deploy provider and select the CodeDeploy Application created from Step 3. > Create pipeline. 
+#### Connect to Github repository. Select `No filter` > `Skip build stage` > Select CodeDeploy as the deploy provider > Select the Instance and CodeDeploy Application created from Step 3 and 4 > `Create pipeline`. 
 
 ![pipeline1](https://github.com/ericincloud/AWS-CodePipeline-and-CodeDeploy/assets/144301872/292393b2-901d-484e-a636-1d96b7825ad9)
 ![pipeline2](https://github.com/ericincloud/AWS-CodePipeline-and-CodeDeploy/assets/144301872/8434d621-edd6-401b-a007-272691f51d99)
@@ -72,7 +78,7 @@ sudo service codedeploy-agent status
 ![CodeDepFiles](https://github.com/ericincloud/AWS-CodePipeline-and-CodeDeploy/assets/144301872/a08ec26f-ff41-43ea-b190-bc08d8070292)
 
 
-#### To change the contents of the webpage and include necessary resources, create `appspec.yml` file in the GitHub respository with the following configuration: 
+#### To change the contents of the webpage along with the necessary resources, create `appspec.yml` file in the GitHub respository with the following configuration: 
 
  ```
 version: 0.0
@@ -134,17 +140,21 @@ service nginx start
 #### Repeat Steps 3 to 5 to create Production pipeline.
 
 ## Step 9: Merge Dev and Prod
-#### When satisfied with the resources in the `Dev` branch, merge with the `Prod` branch in the GitHub repository. This will send contents from the Dev branch to the Prod branch - triggering the production pipeline. The resources will mirror the contents within the Dev branch. 
+#### When satisfied with the application and updates in the `Dev` branch, merge with the `Prod` branch in the GitHub repository. This will send contents from the Dev branch to the Prod branch - triggering the production pipeline. The resources will mirror the contents within the Dev branch. 
 
-### Finish! Congratulations you've setup and configured a 2-Branch pipeline using AWS CodeDeploy and CodePipeline!
+![merge](https://github.com/ericincloud/2-Branch-CI-CD/assets/144301872/e933ccac-2d67-49c0-9ace-d2a22e84d1ed)
+![merge2](https://github.com/ericincloud/2-Branch-CI-CD/assets/144301872/7d152467-f54f-4a17-9110-ec2407dbb1a4)
+![merged](https://github.com/ericincloud/2-Branch-CI-CD/assets/144301872/19aa7569-79a2-4ecf-9572-b4571c9bf91b)
+
+### Finish! Congratulations you've setup and configured Multi-Branch CI/CD using AWS CodeDeploy and CodePipeline!
 
 ## Notes
 * Make sure to install the CodeDeploy agent on EC2 instance.
 * Change `destination` parameter in the `appspec.yml` file based on the OS/distributon + scripts.
 * Delete and recreate scripts files in proper order (before 1st, after 2nd) if script error occurs.
-* Connect/Install a new app when using a new repository.
-* Make sure EC2 instance and CodeDeploy Application has proper IAM permissions.
-* Use "Release Change" to manually trigger pipeline in CodePipeline
+* Make sure EC2 instance and CodeDeploy Application have proper IAM permissions.
+* Use "Release Change" to manually trigger pipeline in CodePipeline.
+* Connect/Install a new app when making pipeline.
 
 ## Reference
 * Stop CodeDeploy Agent <br>
@@ -155,6 +165,30 @@ service nginx start
 
 * Check CodeDeploy Agent Status <br>
   `sudo service codedeploy-agent status`
+
+* Install the NGINX webserver. Use commands: <br>
+
+```
+sudo yum update
+sudo yum install nginx
+sudo systemctl start nginx
+sudo systemctl enable nginx
+
+# Check status:
+sudo systemctl status nginx
+```
+* Install the CodeDeploy Agent using commands: 
+
+```
+sudo yum install -y ruby wget
+wget https://aws-codedeploy-us-east-1.s3.amazonaws.com/latest/install
+chmod +x ./install
+sudo ./install auto
+
+# Check status:
+sudo service codedeploy-agent status
+```
+
 
   
 
