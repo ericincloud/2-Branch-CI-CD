@@ -1,9 +1,8 @@
 # Multi-Branch-CI-CD 
-#### Multi-Branch CI/CD (2 Branches, 2 Pipelines) allow developers to efficiently refine and test applications before deployment to live servers. 
 
-#### By leveraging AWS CodeDeploy, CodePipeline, and GitHub repositories - developers can seamlessly integrate and deliver their code through Continuous Integration and Continuous Delivery (CI/CD) pipelines. Developers iteratively build and test applications in the Development branch. 
+#### Multi-Branch CI/CD (2 Branches, 2 Pipelines) allows developers to efficiently refine and test applications before deployment to live servers. By leveraging AWS CodeDeploy, CodePipeline, and GitHub repositories, developers can seamlessly integrate and deliver their code through Continuous Integration and Continuous Delivery (CI/CD) pipelines. 
 
-#### When satisified, updates from the development branch are merged to the production branch - automatically triggering the production pipeline and deploying the finished application for real-world usage. This streamlined process ensures robust testing and validation before an application reaches production, increasing reliability and stability.
+#### In the development branch, developers iteratively build and test applications, ensuring that every change is thoroughly vetted. Once the updates in the development branch meet the required standards, they are merged into the production branch. This merge automatically triggers the production pipeline, deploying the finished application for real-world usage. This streamlined process ensures rigorous testing and validation before an application reaches production, thereby increasing reliability and stability.
 
 ## Architectural Diagram
 
